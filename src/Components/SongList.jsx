@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import songJSON from '../assets/songs.json'
-import { Table } from '@geist-ui/core';
 
 function SongList() {
 	const [list, setList] = useState(songJSON.sort((a,b) => {
@@ -20,15 +19,17 @@ function SongList() {
 
 	const songs = list.map((song) => {
 		return (
-			{ artist: song.Artist, title: song.Name, }
+			<>
+				<h3>{song.Artist}</h3>
+				<p>{song.Name}</p>
+			</>
 		)
 	})
 
 	return (
-		<Table data={songs}>
-			<Table.Column prop="artist" label="artist" />
-			<Table.Column prop="title" label="title" />
-		</Table>
+		<>
+			{songs}
+		</>
 	)
 }
 
