@@ -74,6 +74,7 @@ button:focus-visible {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		gap: 2rem;
 		width: 100%;
 	}
 }
