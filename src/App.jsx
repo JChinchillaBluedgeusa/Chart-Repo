@@ -5,13 +5,17 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import SongList from './Components/SongList'
-import { Container } from '@mui/material';
+import { Container, CssBaseline, StyledEngineProvider } from '@mui/material';
 
 function App() {
 	return (
-		<Container fixed>
-			<SongList />
-		</Container>
+		<StyledEngineProvider>
+			<CssBaseline />
+			<Container maxWidth="md">
+				<SongList />
+			</Container>
+		</StyledEngineProvider>
+		
 	)
 }
 

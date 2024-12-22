@@ -13,6 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root { height: 100vh; width: 100%; }
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -56,13 +58,22 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+	color: #213547;
+	background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+	color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+	background-color: #f9f9f9;
   }
+}
+.songs-wrapper {
+	width: 100%;
+	.song {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
 }
